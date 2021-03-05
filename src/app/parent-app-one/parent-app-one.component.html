@@ -1,0 +1,8 @@
+<form>
+    <mat-form-field>
+        <mat-label>Parent input field</mat-label>
+        <input id="currentInput" matInput placeholder="Something sensible please!">
+    </mat-form-field>
+</form>
+<app-child-app-one [inputText]="currentInput">
+</app-child-app-one>
