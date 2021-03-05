@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./parent-app-one.component.css']
 })
 export class ParentAppOneComponent implements OnInit {
-  @Input() currentInput: string;
+  currentText: string;
   constructor() { }
 
   ngOnInit(): void {

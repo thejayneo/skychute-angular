@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ParentAppData } from './parent-app-one/parentAppData';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-assignment';
+  data = new ParentAppData('');
 }

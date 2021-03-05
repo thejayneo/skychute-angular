@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ParentAppOneComponent } from './parent-app-one/parent-app-one.component';
 import { ChildAppOneComponent } from './child-app-one/child-app-one.component';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {MatInputModule} from '@angular/material/input';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

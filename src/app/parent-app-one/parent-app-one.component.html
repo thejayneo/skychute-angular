@@ -1,8 +1,8 @@
 <form>
     <mat-form-field>
         <mat-label>Parent input field</mat-label>
-        <input id="currentInput" matInput placeholder="Something sensible please!">
+        <input matInput type="text" [(ngModel)]="currentText" id="currentInput" placeholder="Something sensible please!">
     </mat-form-field>
 </form>
-<app-child-app-one [inputText]="currentInput">
+<app-child-app-one [inputText]="currentText">
 </app-child-app-one>

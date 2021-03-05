@@ -1,4 +1,5 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import { ThisReceiver } from '@angular/compiler';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-child-app-one',
@@ -6,12 +7,11 @@ import { Component, Input, OnChanges } from '@angular/core';
   styleUrls: ['./child-app-one.component.css']
 })
 
-export class ChildAppOneComponent implements OnChanges {
+export class ChildAppOneComponent implements OnInit {
   @Input() inputText: string;
-  currentText: string;
+
   constructor() {}
 
-  ngOnChanges(): void {
-    this.currentText = this.inputText;
+  ngOnInit(): void{
   }
 }
