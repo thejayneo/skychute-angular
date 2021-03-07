@@ -7,12 +7,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ParentAppOneComponent } from './parent-app-one/parent-app-one.component';
 import { ChildAppOneComponent } from './child-app-one/child-app-one.component';
 import { MatInputModule } from '@angular/material/input';
+import { ChildAppTwoComponent } from './child-app-two/child-app-two.component';
+import { ParentAppTwoComponent } from './parent-app-two/parent-app-two.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ParentAppOneComponent,
-    ChildAppOneComponent
+    ChildAppOneComponent,
+    ChildAppTwoComponent,
+    ParentAppTwoComponent
   ],
   imports: [
     BrowserModule,

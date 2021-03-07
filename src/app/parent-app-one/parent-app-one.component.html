@@ -1,9 +1,10 @@
-<form>
-    <mat-form-field>
-        <mat-label>Parent input field</mat-label>
-        <input 
-        matInput name="inputText" type="text" [(ngModel)]="currentText" id="currentInput" placeholder="Something sensible please!">
-    </mat-form-field>
-</form>
-<app-child-app-one [inputText]="currentText">
-</app-child-app-one>
+<div class="parent-comp">
+    <form>
+        <mat-form-field>
+            <mat-label>Parent input field</mat-label>
+            <input 
+            matInput name="inputText" type="text" [(ngModel)]="currentText" id="currentInput" placeholder="Something sensible please!">
+        </mat-form-field>
+    </form>
+    <app-child-app-one [inputText]="currentText"></app-child-app-one>
+</div>
