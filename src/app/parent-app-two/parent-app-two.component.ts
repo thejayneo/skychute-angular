@@ -8,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class ParentAppTwoComponent implements OnInit {
   currentText: string;
 
-  updateCurrentText(childTextInput:string) {
+  updateCurrentText(childTextInput: string): void {
     this.currentText = childTextInput;
   }
-  
+
   constructor() { }
 
   ngOnInit(): void {
