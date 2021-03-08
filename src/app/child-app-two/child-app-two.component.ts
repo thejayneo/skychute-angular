@@ -7,7 +7,6 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class ChildAppTwoComponent implements OnInit {
   @Output() childTextInput = new EventEmitter<string>();
-  text: string;
 
   updateText(text: string){
     this.childTextInput.emit(text);
