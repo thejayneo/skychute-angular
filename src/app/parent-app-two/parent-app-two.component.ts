@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent-app-two.component.css']
 })
 export class ParentAppTwoComponent implements OnInit {
+  currentText: string;
 
+  updateCurrentText(childTextInput:string) {
+    this.currentText = childTextInput;
+  }
+  
   constructor() { }
 
   ngOnInit(): void {

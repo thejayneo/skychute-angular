@@ -1,1 +1,5 @@
-<p>parent-app-two works!</p>
+<div>
+    <p>"{{currentText}}? What does that mean?"</p>
+    <app-child-app-two (childTextInput)="updateCurrentText($event)">
+    </app-child-app-two>
+</div>

@@ -1,1 +1,16 @@
-<p>child-app-two works!</p>
+<div class="child-comp">
+    <form>
+        <mat-form-field>
+            <mat-label>Child input field</mat-label>
+            <input 
+            (keyup)="updateText(childTextInput.value)" 
+            matInput 
+            #childTextInput 
+            name="inputText" 
+            type="text" 
+            [(ngModel)]="text" 
+            id="currentInput" 
+            placeholder="Something silly please!">
+        </mat-form-field>
+    </form>
+</div>
