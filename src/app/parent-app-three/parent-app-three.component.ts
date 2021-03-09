@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-parent-app-three',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent-app-three.component.css']
 })
 export class ParentAppThreeComponent implements OnInit {
+  currentValue = '';
+  subscribedInput = new Observable(function subscribe(observed): void {
+    observed.next(ParentAppThreeComponent.currentValue);
+  });
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
-
 }
+

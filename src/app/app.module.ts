@@ -11,6 +11,7 @@ import { ChildAppTwoComponent } from './child-app-two/child-app-two.component';
 import { ParentAppTwoComponent } from './parent-app-two/parent-app-two.component';
 import { ParentAppThreeComponent } from './parent-app-three/parent-app-three.component';
 import { ChildAppThreeComponent } from './child-app-three/child-app-three.component';
+import { HelperService } from './helper.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import { ChildAppThreeComponent } from './child-app-three/child-app-three.compon
     MatInputModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [
+    HelperService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

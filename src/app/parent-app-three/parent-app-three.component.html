@@ -1,1 +1,10 @@
-<p>parent-app-three works!</p>
+<div class="parent-comp">
+    <form>
+        <mat-form-field>
+            <mat-label>Parent input field</mat-label>
+            <input 
+            matInput [ngModel]="currentValue" type="text" id="currentInput" placeholder="Something sensible please!">
+        </mat-form-field>
+    </form>
+    <app-child-app-three></app-child-app-three>
+</div>
