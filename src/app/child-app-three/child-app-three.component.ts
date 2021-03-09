@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HelperService } from '../helper.service';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-child-app-three',
@@ -17,7 +18,6 @@ export class ChildAppThreeComponent implements OnInit {
   }
 
   getInput(): void{
-    this.helperService.getInput()
-      .subscribe(helperInput => this.inputText = helperInput);
+    this.helperService.setInput();
   }
 }

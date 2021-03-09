@@ -1,15 +1,19 @@
 import { Injectable } from '@angular/core';
-import { ParentAppThreeComponent } from './parent-app-three/parent-app-three.component';
-import { Observable, of } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HelperService {
+  helperInput = new BehaviorSubject('');
   constructor() { }
 
-  getInput(): Observable<string> {
-    const helperInput = of(ParentAppThreeComponent.currentValue);
-    return helperInput;
+  getInput(inputText: string): void {
+    this.helperInput.next(inputText);
+  }
+
+  setInput(): string {
+    return this.helperInput.getValue();
   }
 }
+
