@@ -1,0 +1,15 @@
+<div class="child-comp">
+    <form>
+        <mat-form-field>
+            <mat-label>Child input field</mat-label>
+            <input 
+            matInput 
+            type="text"
+            (keyup)="inputUpdated(childTextInput.value)"
+            #childTextInput
+            name="textInput" 
+            id="currentInput" 
+            placeholder="Something silly! please!">
+        </mat-form-field>
+    </form>
+</div>

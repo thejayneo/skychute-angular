@@ -12,6 +12,8 @@ import { ParentAppTwoComponent } from './parent-app-two/parent-app-two.component
 import { ParentAppThreeComponent } from './parent-app-three/parent-app-three.component';
 import { ChildAppThreeComponent } from './child-app-three/child-app-three.component';
 import { HelperService } from './helper.service';
+import { ParentAppFourComponent } from './parent-app-four/parent-app-four.component';
+import { ChildAppFourComponent } from './child-app-four/child-app-four.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { HelperService } from './helper.service';
     ChildAppTwoComponent,
     ParentAppTwoComponent,
     ParentAppThreeComponent,
-    ChildAppThreeComponent
+    ChildAppThreeComponent,
+    ParentAppFourComponent,
+    ChildAppFourComponent
   ],
   imports: [
     BrowserModule,
