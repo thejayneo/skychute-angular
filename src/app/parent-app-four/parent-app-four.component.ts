@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { HelperService } from '../helper.service';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { HelperService } from '../alt-helper.service';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -7,7 +7,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './parent-app-four.component.html',
   styleUrls: ['./parent-app-four.component.css']
 })
-export class ParentAppFourComponent implements OnInit {
+export class ParentAppFourComponent implements OnInit, OnDestroy {
   inputText: string;
   subscription: Subscription;
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HelperService } from '../helper.service';
+import { HelperService } from '../alt-helper.service';
 
 @Component({
   selector: 'app-child-app-four',
