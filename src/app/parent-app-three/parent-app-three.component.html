@@ -3,7 +3,13 @@
         <mat-form-field>
             <mat-label>Parent input field</mat-label>
             <input 
-            matInput name="textInput" [(ngModel)]="currentValue" type="text" id="currentInput" placeholder="Something sensible please!">
+            matInput 
+            type="text"
+            (keyup)="inputUpdated(parentTextInput.value)"
+            #parentTextInput
+            name="textInput" 
+            id="currentInput" 
+            placeholder="Something sensible please!">
         </mat-form-field>
     </form>
     <app-child-app-three></app-child-app-three>

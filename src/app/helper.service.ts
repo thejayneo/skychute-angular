@@ -6,14 +6,10 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class HelperService {
   helperInput = new BehaviorSubject('');
-  constructor() { }
+  currentText = this.helperInput.asObservable();
 
-  getInput(inputText: string): void {
-    this.helperInput.next(inputText);
-  }
-
-  setInput(): string {
-    return this.helperInput.getValue();
+  initService(text: string): void{
+    this.helperInput.next(text);
   }
 }
 

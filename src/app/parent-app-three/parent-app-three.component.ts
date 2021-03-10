@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { HelperService } from '../helper.service';
 
 @Component({
@@ -6,13 +6,10 @@ import { HelperService } from '../helper.service';
   templateUrl: './parent-app-three.component.html',
   styleUrls: ['./parent-app-three.component.css']
 })
-export class ParentAppThreeComponent implements OnInit {
-  currentValue: string;
-
+export class ParentAppThreeComponent {
   constructor(private helperService: HelperService) {}
-
-  ngOnInit(): void {
-    this.helperService.getInput(this.currentValue);
+  inputUpdated(text: string): void {
+    this.helperService.initService(text);
   }
 }
 

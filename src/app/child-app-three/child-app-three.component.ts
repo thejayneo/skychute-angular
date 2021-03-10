@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { HelperService } from '../helper.service';
-import { BehaviorSubject } from 'rxjs';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-child-app-three',
@@ -8,16 +8,17 @@ import { BehaviorSubject } from 'rxjs';
   styleUrls: ['./child-app-three.component.css']
 })
 
-export class ChildAppThreeComponent implements OnInit {
+export class ChildAppThreeComponent implements OnInit, OnDestroy {
   inputText: string;
+  subscription: Subscription;
 
   constructor(private helperService: HelperService) {}
 
   ngOnInit(): void{
-    this.getInput();
+    this.subscription = this.helperService.currentText.subscribe(text => this.inputText = text);
   }
 
-  getInput(): void{
-    this.helperService.setInput();
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 }
