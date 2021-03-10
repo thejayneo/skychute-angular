@@ -14,7 +14,8 @@ export class ParentAppFourComponent implements OnInit, OnDestroy {
   constructor(private helperService: HelperService) { }
 
   ngOnInit(): void{
-    this.subscription = this.helperService.currentText.subscribe(text => this.inputText = text);
+    this.subscription = this.helperService.pushHelperInput().subscribe((text) => {this.inputText = text;
+    });
   }
 
   ngOnDestroy(): void {
